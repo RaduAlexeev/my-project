@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Calculator</title>
+</head>
+
+<body class="w-screen h-screen bg-zinc-400 flex justify-center items-center">
+    <div class="background-phone w-[360px] h-[740px] bg-black rounded-[80px] relative flex justify-center items-center">
+        <div class="phone w-[370px] h-[750px] " style="background: url(./img/apple-phone.png) no-repeat center">
+            <div class="time font-sans top-[14px] left-[50px] text-white text-lg absolute"><strong>9</strong>:<strong>41</strong> </div>
+            <div class="cellular top-[23px] left-[247px] absolute"> <img src="./img/icon_cellular_white.png" alt=""> </div>
+            <div class="wifi top-[21px] left-[274px] absolute"> <img src="./img/icon_wifi_white.png" alt=""> </div>
+            <div class="battery top-[22px] left-[299px] absolute"> <img src="./img/icon_battery_white.png" alt=""></div>
+            <div class="w-[331px] h-[250px] left-[16px] top-[40px] absolute flex justify-end items-end"> 
+                <p class="display-input text-[80px] bottom-[10px] right-[25px] text-white font-light absolute">0</p> 
+            </div>
+            
+            <div class="p-2 w-[331px] h-[75px] text-3xl font-semibold top-[290px] left-[16px] absolute flex justify-between items-center">
+                <button class="bg-gray-400 w-[73px] h-[73px] rounded-full" onclick="clearDisplay()">C</button>
+                <button class="bg-gray-400 w-[73px] h-[73px] rounded-full text-2xl" onclick="changeMinus()">+/-</button>
+                <button class="bg-gray-400 w-[73px] h-[73px] rounded-full" onclick="addButtons('%')">%</button>
+                <button class="bg-orange-400 w-[73px] h-[73px] rounded-full text-white text-[50px] pb-[10px]" onclick="addButtons('/')">÷</button>   
+            </div>
+            
+            <div class="p-2 w-[331px] h-[75px] text-3xl font-semibold top-[370px] left-[16px] absolute flex justify-between items-center">
+                <button class="buttons bg-gray-800 text-white w-[73px] h-[73px] rounded-full" onclick="addButtons('7')">7</button>
+                <button class="buttons bg-gray-800 text-white w-[73px] h-[73px] rounded-full" onclick="addButtons('8')">8</button>
+                <button class="buttons bg-gray-800 text-white w-[73px] h-[73px] rounded-full" onclick="addButtons('9')">9</button>
+                <button class="buttons bg-orange-400 text-white text-[50px] w-[73px] h-[73px] rounded-full pb-[10px]" onclick="addButtons('*')">×</button>
+            </div>
+            
+            <div class="p-2 w-[331px] h-[75px] text-3xl font-semibold top-[450px] left-[16px] absolute flex justify-between items-center">
+                <button class="buttons bg-gray-800 text-white w-[73px] h-[73px] rounded-full" onclick="addButtons('4')">4</button>
+                <button class="buttons bg-gray-800 text-white w-[73px] h-[73px] rounded-full" onclick="addButtons('5')">5</button>
+                <button class="buttons bg-gray-800 text-white w-[73px] h-[73px] rounded-full" onclick="addButtons('6')">6</button>
+                <button class="buttons bg-orange-400 text-white text-[50px] w-[73px] h-[73px] rounded-full pb-[10px]" onclick="addButtons('-')">−</button>
+            </div>
+            
+            <div class="p-2 w-[331px] h-[75px] text-3xl font-semibold top-[530px] left-[16px] absolute flex justify-between items-center">
+                <button class="buttons bg-gray-800 text-white w-[73px] h-[73px] rounded-full" onclick="addButtons('1')">1</button>
+                <button class="buttons bg-gray-800 text-white w-[73px] h-[73px] rounded-full" onclick="addButtons('2')">2</button>
+                <button class="buttons bg-gray-800 text-white w-[73px] h-[73px] rounded-full" onclick="addButtons('3')">3</button>
+                <button class="buttons bg-orange-400 text-white text-[50px] w-[73px] h-[73px] rounded-full pb-[10px]" onclick="addButtons('+')">+</button>
+            </div>
+
+            <div class="p-2 w-[331px] h-[75px] text-3xl font-semibold top-[610px] left-[16px] absolute flex justify-between items-center">
+                <button class="buttons bg-gray-800 text-white w-[155px] h-[73px] rounded-full text-left pl-[34px]" onclick="addButtons('0')">0</button>
+                <button class="buttons bg-gray-800 text-white w-[73px] h-[73px] left-[10px] rounded-full" onclick="addButtons('.')">,</button>
+                <button class="buttons bg-orange-400 text-white text-[50px] w-[73px] h-[73px] rounded-full pb-[10px]" onclick="addButtons('=')">=</button>
+            </div>
+
+            <div class="rectangle w-[140px] h-[5px] bg-white rounded-[100px] left-[115px] top-[720px] absolute"></div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
